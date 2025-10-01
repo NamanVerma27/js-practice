@@ -44,3 +44,39 @@ jsUser.greeting()
 Object.freeze(jsUser)
 jsUser.email = "anything@gmail.com" // won't work
 console.log(jsUser.email); // email won't change
+
+// object literal
+const tinderUser = new Object(); // another way to create object
+
+tinderUser.name = "Random";
+tinderUser.age = 18;
+tinderUser.isLoggedIn = false;
+console.log(tinderUser);
+
+// nested object
+const regularUser = {
+    email: "yo@gmail.com" ,
+    fullname: {
+        userfullname: {
+            firstname: "Random",
+            lastname: "Guy"
+        }
+    }
+}
+
+console.log(regularUser.fullname.userfullname); // accessing nested object
+
+// object assign
+const obj1 = {1: "one", 
+    2: "two"
+};
+
+const obj2 = {3: "three",
+    4: "four"
+};
+
+const obj3 = Object.assign({}, obj1, obj2) // merging two objects
+console.log(obj3);
+
+console.log(Object.key(tinderUser));
+console.log(Object.values(tinderUser)) // print keys of object
