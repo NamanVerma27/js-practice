@@ -78,5 +78,51 @@ const obj2 = {3: "three",
 const obj3 = Object.assign({}, obj1, obj2) // merging two objects
 console.log(obj3);
 
-console.log(Object.key(tinderUser));
-console.log(Object.values(tinderUser)) // print keys of object
+console.log(Object.key(tinderUser)); // print keys of object
+console.log(Object.values(tinderUser)) // print values of object
+
+const course = {
+    coursename: "JavaScript",
+    price: 999,
+    courseInstructor: "Random Guy"
+}
+
+// object destructuring - extracting properties to variables - renaming property
+const {courseInstructor : instructor} = course // {propertyname : new name} = object
+console.log(instructor);
+
+// API in json format demo
+/*
+
+{
+    "login": "randomName",
+    "id": 11613311,
+    "node_id": "MDQ6VXNlcjExNjEzMzEx",
+    "avatar_url": "https://avatars.githubusercontent.com/u/11613311?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/randomName",
+    "html_url": "https://api.github.com/users/randomName"
+}
+
+*/
+
+// API in array format demo
+/*
+
+[
+    {
+        "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+        "email": "random@email"
+    },
+    {
+        "id": 2,
+        "name": "Ervin Howell",
+        "username": "Antonette",
+        "email": "random_02@email"
+    }
+]
+
+*/
+
